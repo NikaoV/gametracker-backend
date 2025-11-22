@@ -10,7 +10,7 @@ const app = express();
 // Middleware: permiten que el servidor entienda JSON y acepte peticiones de otros orígenes
 app.use(express.json());
 app.use(cors());
-const juegosRoutes = require("./src/routes/juegos");
+const juegosRoutes = require("./src/routes/juegos.js");
 app.use("/api/juegos", juegosRoutes);
 
 

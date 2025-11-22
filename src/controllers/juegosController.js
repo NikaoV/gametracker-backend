@@ -1,4 +1,4 @@
-const Juego = require("../models/juego");
+const Juego = require("../models/juego.js");
 
 // Obtener todos los juegos
 const obtenerJuegos = async (req, res) => {
@@ -13,6 +13,7 @@ const obtenerJuegos = async (req, res) => {
 // Agregar un nuevo juego
 const agregarJuego = async (req, res) => {
   try {
+    console.log(req.body)
     const nuevoJuego = new Juego(req.body);
     await nuevoJuego.save();
     res.status(201).json(nuevoJuego);

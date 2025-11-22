@@ -9,6 +9,8 @@ const juegoSchema = new mongoose.Schema({
   completado: { type: Boolean, default: false },
   puntuacion: { type: Number, min: 0, max: 5 },
   reseña: { type: String },
+  customID: {type: Number, unique: true, required: true},
+  imagen: { type: String, required: true },
 });
 
 // Modelo
